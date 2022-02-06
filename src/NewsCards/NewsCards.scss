@@ -1,0 +1,59 @@
+.newsCards{
+    margin: 2rem auto;
+}
+.noMoreArticles{
+    display: none;
+}
+
+.loadMore{
+    display: block;
+    padding: 0.5rem;
+    margin: auto;
+}
+
+.loading{
+    height: 0.8rem;
+    width: 0.4rem;
+    display: block;
+    background-color: black;
+    margin: 0.5rem;
+}
+
+.loading:nth-child(1){
+    animation-name: loadingAnime1;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+}
+.loading:nth-child(2){
+    animation-name: loadingAnime2;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+}
+.loading:nth-child(3){
+    animation-name: loadingAnime3;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+}
+.loadingDivs{
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes loadingAnime1{
+    25%{transform: scale(0.25); background-color: lightgrey;}
+    50%{transform: scale(0.50);background-color: lightslategray;}
+    75%{transform: scale(0.75);background-color: lightslategray;}
+    100%{transform: scale(1);background-color: #242B2E;}
+}
+@keyframes loadingAnime2{
+    25%{transform: scale(0.50);background-color: lightslategray;}
+    50%{transform: scale(0.75);background-color: lightslategray;}
+    75%{transform: scale(1);background-color: #242B2E;}
+    100%{transform: scale(0.25);background-color: lightgrey;}
+}
+@keyframes loadingAnime3{
+    25%{transform: scale(0.75);background-color: lightslategray;}
+    50%{transform: scale(1);background-color: #242B2E;}
+    75%{transform: scale(0.25);background-color: lightgrey;}
+    100%{transform: scale(0.50);background-color: lightslategray;}
+}

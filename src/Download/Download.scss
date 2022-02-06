@@ -1,0 +1,17 @@
+.downloadForPhone img{
+    width: 10rem;
+    height: 3rem;
+    object-fit: contain;
+}
+.downloadForPhone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f44336;
+    width: 55rem;
+    height: 4rem;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    color: white;
+    box-sizing: border-box;
+}
