@@ -1,12 +1,15 @@
 .sidebar{
     height: 100vh;
     background-color: #303036;
-    width: 15rem;
     position: fixed;
     box-sizing: border-box;
     top:0;
     color: white;
+    width: 15rem;
     padding: 0 0.5rem;
+    animation-name: slideAnime;
+    animation-duration: 1000ms;
+    animation-iteration-count:1;
 }
 
 .languageButton{
@@ -17,9 +20,41 @@
     color: white;
 }
 
+.languageButton:hover{
+    cursor: pointer;
+}
+
 .languageButtons{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    justify-content: center;
+}
+
+.categoriesHeading{
+    font-size: 0.8rem;
+    color: #808290;
+}
+
+@keyframes slideAnime{
+    from{width: 0;}
+    to{width: 15rem;}
+}
+
+.fa-times{
+    position: absolute;
+    top: 2rem;
+    left: 16rem;
+    color: black;
+}
+.fa-times:hover{
+    cursor: pointer;
+}
+
+.closeText{
+    position: absolute;
+    top: 1rem;
+    left: 17rem;
+    color: black;
 }

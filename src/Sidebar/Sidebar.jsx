@@ -49,6 +49,7 @@ const Sidebar = () => {
         <button className='languageButton'>English</button>
         <button className='languageButton'>हिन्दी</button>
       </div>
+      <hr/>
       <div className='categoriesHeading'>Categories</div>
       <div className="sidebarOptions">
       {

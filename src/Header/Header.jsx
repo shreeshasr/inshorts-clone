@@ -5,8 +5,6 @@ import './Header.scss'
 const Header = () => {
     const [isSidebarShown, setIsSidebarShown] = useState(false);
     const showHideSidebar = () => {
-        console.log("isSidebarShown " + isSidebarShown)
-        console.log("Triggered")
         isSidebarShown ? setIsSidebarShown(false) : setIsSidebarShown(true)
     }
     return(
@@ -16,7 +14,12 @@ const Header = () => {
         <div className='menuText'>Menu</div>
         <img className="inshortsLogo" src={logo} alt="inshorts"/>
     </section>
-    <Sidebar isSidebarShown={isSidebarShown}/>
+    {
+        isSidebarShown ? <><Sidebar isSidebarShown={isSidebarShown}/>
+        <i className="fas fa-times" onClick={ () => { showHideSidebar() }}></i>
+        <div className='closeText'>Close</div></> : ""
+    }
+    
     </>);
 };
 
