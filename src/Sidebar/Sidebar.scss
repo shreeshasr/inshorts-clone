@@ -1,0 +1,25 @@
+.sidebar{
+    height: 100vh;
+    background-color: #303036;
+    width: 15rem;
+    position: fixed;
+    box-sizing: border-box;
+    top:0;
+    color: white;
+    padding: 0 0.5rem;
+}
+
+.languageButton{
+    width: 5rem;
+    height: 2rem;
+    border: 1px solid #808290;
+    background-color: #303036;
+    color: white;
+}
+
+.languageButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem 0;
+}
