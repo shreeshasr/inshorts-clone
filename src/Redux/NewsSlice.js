@@ -9,6 +9,7 @@ import mask from '../images/mask.jpg'
 import instagram from '../images/instagram.jpeg'
 import flying from '../images/flying.jpeg'
 const initialState = {
+    isEnglish: true,
     news: [
         {
         id: 1, 
@@ -97,11 +98,13 @@ const initialState = {
 export const newsSlice = createSlice({
     initialState,
     name: "news",
-    // reducers: {
-
-    // }
+    reducers: {
+        toggleLanguage: (state) => {
+            state.isEnglish = state.isEnglish ? false : true
+        }
+    }
 })
 
-// const {} = newsSlice.actions
+export const {toggleLanguage} = newsSlice.actions
 
 export default newsSlice.reducer
