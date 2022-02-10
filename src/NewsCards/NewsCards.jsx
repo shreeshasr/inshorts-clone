@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import NewsCard from '../NewsCard/NewsCard';
 import './NewsCards.scss'
 const NewsCards = () => {
+const news = useSelector( state => state.newsReducers.news)
 const newsArticles = useSelector( state => state.newsReducers.news)
 const [numberOfArticles, setNumberOfArticles] = useState(3);
 const [showLoading, setShowLoading] = useState(false)
@@ -21,6 +22,9 @@ const loadMore = () => {
     }, 2000)
     
 }
+useEffect(() => {
+    setNumberOfArticles(3);
+}, [news]);
 
   return(
   <section className='newsCards'>
@@ -29,7 +33,7 @@ const loadMore = () => {
               return <NewsCard news={news} key={news.id}/>
           })
       }
-      {showLoading ? "" :<button className={ numberOfArticles === newsArticles.length ? "noMoreArticles" : "loadMore"} onClick={ () => loadMore()}>Load more</button>}
+      {showLoading ? "" :<button className={ numberOfArticles >= news.length ? "noMoreArticles" : "loadMore"} onClick={ () => loadMore()}>Load more</button>}
       {showLoading ? <div className='loadingDivs'><div className='loading'></div><div className='loading'></div><div className='loading'></div></div>: ""}
       
   </section>);

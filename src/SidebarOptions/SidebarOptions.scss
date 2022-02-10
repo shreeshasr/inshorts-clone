@@ -2,9 +2,14 @@
     color: white;
     padding: 0.7rem 2rem;
     border-radius: 0.3rem;
+    margin: 0.2rem 0;
 }
 
 .sidebarOption:hover{
     background-color: #808290;
     cursor: pointer;
+}
+
+.Active{
+    background-color: #808290;
 }
